@@ -53,17 +53,32 @@
 		
 		tfoot td {
 			font-size:.9em;
-			color:#666;
+			color:black;
 		}
         
         tbody tr:nth-child(odd) {
-            background-color: beige   
+            background-color: #ddd;   
+        }
+              
+        .coluna1{
+            background-color: #F0F0F0;
         }
         
-        tbody tr:nth-child(even) {
-            background-color:antiquewhite  
-        }        
-	
+        .coluna2{
+            background-color: gold;
+        }
+        
+        .coluna3{
+            background-color: silver;
+        }
+        
+        .coluna4{
+            background-color: saddlebrown;
+        }
+        
+        .coluna5{
+            background-color: dodgerblue;
+        }
 	
 	</style>
 
@@ -72,6 +87,14 @@
         <table>
         
             <caption>Olimpiadas do Rio de Janeiro 2016</caption>
+            
+            <colgroup>
+                <col class="coluna1">
+                <col class="coluna2">
+                <col class="coluna3">
+                <col class="coluna4">
+                <col class="coluna5">
+            </colgroup>
             <thead>
                 <tr>
                     <td></td>
