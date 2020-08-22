@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            
+            function number(){
+                var x = Math.ceil(Math.random()*60);
+                if(x < 10){
+                    x = String("0"+x);
+                }
+                return x;
+            }
+            
+            function sorting(a,b){
+                return a-b;
+            }
+            
+            var sorteio;
+            var mega = new Array();
+            
+            for (var i = 0; i <= 5;){
+                var n = number();
+                if(mega.indexOf(n) < 0){
+                    mega.push(n);
+                    i++;
+                }
+                    
+            }
+            
+            console.log("Os seus números da mega sena são: "+ mega.sort(sorting));
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

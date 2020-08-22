@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Aulas de Javascript</title>
+        <script>
+            var nome = "Igor Teixeira Pereira";
+            nome = nome.toLowerCase();
+            var words = nome.split(" ");
+            
+            for(var i = 0; i < words.length; i++){
+                var temp = words[i].charAt(0);
+                words[i] = temp.toUpperCase() + words[i].substr(1, words[i].length);
+            }
+            
+            console.log(words);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
