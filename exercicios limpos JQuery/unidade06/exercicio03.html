@@ -8,9 +8,19 @@
 			#janela { border:1px solid #666; width:200px; height:200px; margin-top:10px }
 		</style>
         
-        <script src="jquery-3.2.1.min.js"></script>
+        <script src="../jquery-3.5.1.min.js"></script>
         <script>
-
+            function applyColor(e){
+                $("#janela").css('background-color', e.data.cor);
+                $("#janela").css('width', e.data.largura);
+            }
+            
+            $(function(){
+                $("#botaoazul").on("click", {cor:'blue', largura:'250px'},applyColor);
+                $("#botaovermelho").on("click", {cor:'red', largura:'350px'}, applyColor);
+                $("#botaoverde").on("click", {cor:'green', largura:'450px'}, applyColor);
+            });
+            
 	 	</script>        
     </head>
     

@@ -4,9 +4,24 @@
         <meta charset="UTF-8">
         <title>Curso jQuery Fundamental</title>
         
-        <script src="jquery-3.2.1.min.js"></script>
+        <script src="../jquery-3.5.1.min.js"></script>
         <script>
-					
+		$(function(){
+            $("#cursohtml").click(function(){
+                alert("Click on HTML Button");
+            });
+            
+            function mostrarMensagem(){
+                alert("Mouse passed on CSS Button");
+                $("#cursocss").off("mouseover", mostrarMensagem);
+            }
+            function mostrarMensagem2(){
+                alert("Click on CSS Button");
+            }
+            
+            $("#cursocss").on("mouseover", mostrarMensagem);
+            $("#cursocss").on("click", mostrarMensagem2);
+        });			
 		</script>        
     </head>
 

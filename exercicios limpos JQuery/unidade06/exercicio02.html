@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
@@ -7,15 +7,25 @@
 			#janela { width:300px; height:300px; background-color:#069; margin-top:20px }
 		</style>
         
-        <script src="jquery-3.2.1.min.js"></script>
+        <script src="../jquery-3.5.1.min.js"></script>
         <script>
-			
+			$(function(e){
+                $("#janela").hide();
+                
+                $("#mostrar").hover(mostrarJanela, esconderJanela);
+            });
+            
+            function mostrarJanela(){
+                $("#janela").show();
+            }
+            function esconderJanela(){
+                $("#janela").hide();
+            }
 		</script>        
     </head>
 
     <body>
         <input type="button" id="mostrar" 	value="Mostrar" />
-        <input type="button" id="esconder" 	value="Esconder" />
         
         <div id="janela"></div>
     </body>

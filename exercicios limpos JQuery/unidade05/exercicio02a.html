@@ -8,10 +8,14 @@
         	#janelinha { position:absolute; top:10px; left:10px; width:50px; height:50px; background-color:#F00 } 
         </style>
         
-        <script src="jquery-3.2.1.min.js"></script>
+        <script src="../jquery-3.5.1.min.js"></script>
         <script>
 			$(function(e) {
-				
+				console.log("Posição top do elemento: "+$("#janela").position().top);
+                console.log("Posição left do elemento: "+$("#janela").position().top);
+                
+                console.log("Posição top do elemento: "+$("#janelinha").offset().top);
+                console.log("Posição lef do elemento: "+$("#janela").offset().top);
 			});
 		</script>        
     </head>

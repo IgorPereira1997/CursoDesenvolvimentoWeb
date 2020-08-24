@@ -11,10 +11,11 @@
 			li a	{ padding:10px 6px; color:#39C; text-decoration:none } 
         </style>
 
-		<script src="jquery-3.2.1.min.js"></script>
+		<script src="../jquery-3.5.1.min.js"></script>
         <script>
 			$( function(e) {
-	
+	           $("li a[href$='.pdf']").before("<img src='imagens/icon_pdf.gif'>");
+                $("li a[href$='.zip']").before("<img src='imagens/icon_zip.gif'>");
             });
 		</script>
     </head>

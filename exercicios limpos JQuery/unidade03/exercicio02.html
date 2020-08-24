@@ -11,14 +11,18 @@
             <a href="#">Argentina</a>
             <a href="#">Uruguai</a>
             <a href="#">Chile</a>
+            <a href="#">Colômbia</a>
         </nav>
         
+        <a href="#">Paraguai</a>
+        
 		<!-- scripts -->
-        <script src="jquery-3.2.1.min.js"></script>
-        <script>    
+        <script src="../jquery-3.5.1.min.js"></script>
+        <script>
+            alert("Essa página contém "+$("nav a").length+" links");
         	$( function() {
-				
-			})
+				$("nav a:contains('Brasil')").css("color","red").css("text-decoration","none").css("display","block");
+			});
         </script>   
                 
     </body>
