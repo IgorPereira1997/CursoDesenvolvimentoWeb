@@ -6,7 +6,36 @@
 
         <script type="text/babel">
         
+            /*function* gen(){
+                yield "Uva";
+                yield 2;
+                yield 3;
+            }
 
+            var g= gen();
+
+            console.log(g.next());
+            console.log(g.next());
+            console.log(g.next());
+            console.log(g.next());*/
+
+            function* idCriador(){
+                var i = 0;
+                while(true){
+                    yield i++;
+                }
+            }
+            
+            var g = idCriador();
+            
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
+            console.log(g.next().value);
 
         </script>
     </head>
