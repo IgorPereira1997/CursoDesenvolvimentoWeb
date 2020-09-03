@@ -5,6 +5,9 @@
         <title>Curso PHP FUNDAMENTAL</title>
     </head>
 
-    <body>       
+    <body> 
+        <?php
+            
+        ?>      
     </body>
 </html>

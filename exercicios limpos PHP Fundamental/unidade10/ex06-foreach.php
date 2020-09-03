@@ -5,8 +5,14 @@
     <title>CURSO PHP FUNDAMENTAL</title>
 </head>
 <body>
-    <?php                    
-        
+    <?php
+        $_agenda = array("nome" => "Igor",
+                         "tel" => "1234-5678",
+                         "idade" => 23,
+                         "sal" => 0);
+        foreach ($_agenda as $key => $value) {
+            echo "$key: $value<br>";
+        }
     ?>
 </body>
 </html>

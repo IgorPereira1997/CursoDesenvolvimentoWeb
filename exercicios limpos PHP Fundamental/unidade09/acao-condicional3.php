@@ -7,7 +7,8 @@
     </head>
     <body>
         <?php 
-
+            $_idade = 79;
+            echo "O indivíduo é: " . ($_idade >= 18 ? ($_idade <= 70 ? "adulto!" : "idoso!") : "menor de idade!");
         ?>
     </body>
 </html>

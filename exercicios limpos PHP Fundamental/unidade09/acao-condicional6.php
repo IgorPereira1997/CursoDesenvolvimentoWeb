@@ -7,7 +7,13 @@
     </head>
     <body>
         <?php 
-
+            $_idade = 18;
+            $_sexo = "F";
+            if($_idade < 17 || $_idade == 17){
+                echo ($_sexo == "F"? "Menor de idade e mulher": "Menor de idade e homem");
+            }else{
+            echo ($_sexo == "F" ? "Maior de idade e mulher" : "Maior de idade e homem");
+            }
         ?>
     </body>
 </html>

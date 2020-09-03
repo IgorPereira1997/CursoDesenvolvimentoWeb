@@ -7,7 +7,23 @@
     </head>
     <body>
         <?php 
-
+            $_dia = "Qua";
+            switch ($_dia) {
+                case 'Dom':
+                case 'Sáb':
+                    echo "Fim de semana";
+                    break;
+                case 'Seg':
+                case 'Ter':
+                case 'Qua': 
+                case "Qui":
+                case "Sex":
+                    echo "Dia de semana";
+                    break;
+                default:
+                    echo "Dia inválido";
+                    break;
+            }
         ?>
     </body>
 </html>

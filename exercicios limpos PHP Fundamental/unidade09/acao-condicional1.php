@@ -7,7 +7,13 @@
     </head>
     <body>
         <?php 
-
+            $_a = 5;
+            $_b = 3;
+            if($_a == $_b){
+                echo "São iguais!<br>";
+            }else{
+                echo "São diferentes!<br>";
+            }
         ?>
     </body>
 </html>
