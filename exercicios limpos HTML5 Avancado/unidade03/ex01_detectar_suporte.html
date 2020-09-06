@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso HTML5 Avançado</title>
+    	<link href="css/estilo.css" rel="stylesheet">
+        <script>        
+            var nav = null; 
+        
+			function pegarPosicao() {
+				document.getElementById("status").innerHTML = "aguarde..."; 
+				if(nav == null){
+					nav = window.navigator;
+				}
+
+				var geoloc = nav.geolocation;
+				if(geoloc != null){
+					geoloc.getCurrentPosition(retornarPosicao, retornarFalha);
+				}
+
+				function retornarPosicao(){
+					var mensagem = "Sucesso! Foi possível identificar posição!";
+					document.getElementById("status").innerHTML = mensagem;
+				}
+
+				function retornarFalha(){
+					var mensagem = "Falha! Não foi possível identificar sua posição";
+					document.getElementById("status").innerHTML = mensagem;
+				}
+			}
+	
+        </script>
+        
+	</head>
+    <body>
+        <div id="status"></div>
+        
+        <input type="button" onclick="pegarPosicao()" value="Pegar Geolocalização"  /> 
+    </body>
+
+</html>
