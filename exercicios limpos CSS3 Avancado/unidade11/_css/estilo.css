@@ -55,6 +55,15 @@ header {
     background-position: top center;
 } 
 
+header h1{
+    font-family: Roboto, sans-serif;
+    font-size: 600%;
+    color: white;
+    text-align: center;
+    padding-top: 25%;
+    text-shadow: 0 0 7px #333;
+}
+
 main {
     margin:0;
     width: 100%;

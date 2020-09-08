@@ -69,6 +69,10 @@ footer {
     clear:both;
 }  
 
+nav#menu_mobile{
+    display: none;
+}
+
 /* mostrar menu do desktop */
 nav#menu_desktop {
 	display:block;

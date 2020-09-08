@@ -20,12 +20,11 @@ aside img:nth-child(2) {
 }
 
 @media (max-width:695px) {
-    aside {
+    aside, aside img:nth-child(1), aside img:nth-child(2) {
         text-align: center;
     }
     
     aside img:nth-child(1), aside img:nth-child(2) {
         float: none;
-        text-align: center;
     }  
 }

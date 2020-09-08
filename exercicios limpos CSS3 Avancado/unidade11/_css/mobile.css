@@ -3,6 +3,11 @@ header {
     margin-top: 70px;
 }
 
+header h1{
+    font-size: 200%;
+    padding-top: 200px;
+}
+
 nav {
     position:absolute;
     left:0;top:0;

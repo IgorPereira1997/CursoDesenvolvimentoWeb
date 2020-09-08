@@ -1,11 +1,15 @@
-var nomeCanal = 'backtotriangle';
+//var nomeCanal = 'backtotriangle';
+//var nomeCanal = 'CleverTechieTube';
+var nomeCanal = 'oloopinfinito';
+//var nomeCanal = 'AdrenalineBr';
 var upload_id;
 
 $(document).ready(function() {
     $.get("https://www.googleapis.com/youtube/v3/channels", {
             part: 'contentDetails',
             forUsername: nomeCanal,
-            key: 'null'},
+            key: '' //your youtube key here
+            },
             function(data) {
                 upload_id = data.items[0].contentDetails.relatedPlaylists.uploads;
                 pegarVideos(upload_id);
@@ -15,16 +19,21 @@ $(document).ready(function() {
     function pegarVideos(id) {
         $.get("https://www.googleapis.com/youtube/v3/playlistItems", {
                     part:'snippet',
-                    maxResults: 12,
+                    maxResults: 21,
                     playlistId: id,
-                    key: 'AIzaSyB49WfTkgfK2menTbmVCkLG0f9cYWQ9XKU'},
+                    key: '' //your youtube key here
+                    },
             function(data) {
                 var imagem;
                 var arquivo;
                 
                 $.each(data.items, function(i, item) {
-                    videoId     = item.snippet.resourceId.videoId;
-                    arquivo = '<li></li>';
+                    imagem = item.snippet.thumbnails.medium.url;
+                    titulo = item.snippet.title;
+                    desc = item.snippet.description;
+                    videoId = item.snippet.resourceId.videoId;
+                    publicado = formatarData(item.snippet.publishedAt);
+                    arquivo = '<li class="principal"><a class="fancybox-media" href="https://youtube.com/watch?v='+ videoId +'"></a><div class="foto"><img src="' + imagem + '"><div class="legenda"><h5>' + titulo + '</h5><p>' + desc + '</p></div></div></li>';
                     $('div#janela ul').append(arquivo);
                 });
             }
